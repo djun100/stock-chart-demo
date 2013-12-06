@@ -4,4 +4,5 @@
     <string name="item_simple_stock_chart">Simple stock chart</string>
     <string name="item_logarithmic_scale">Logarithmic scale</string>
     <string name="item_realtime_stock_chart">Realtime stock chart</string>
+    <string name="item_vaxis">Virtual axis</string>
 </resources>

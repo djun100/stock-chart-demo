@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.stockchart.StockChartActivity;
 import org.stockchart.core.Area;
+import org.stockchart.core.AxisRange;
 import org.stockchart.core.Axis.Side;
 import org.stockchart.demo.utils.StockDataGenerator;
 import org.stockchart.demo.utils.StockDataGenerator.Point;
@@ -72,11 +73,16 @@ public class RealTimeChartActivity extends StockChartActivity
 		fVolumeSeries.setYAxisSide(Side.RIGHT);
 		
 		Area priceArea = this.getStockChartView().addArea();
-		
 		priceArea.getSeries().add(fPriceSeries);
 		
 		Area volumeArea = this.getStockChartView().addArea();
 		volumeArea.getSeries().add(fVolumeSeries);
+		
+		AxisRange ar = new AxisRange();
+		ar.setZoomable(true);
+		ar.setMovable(true);
+		
+		this.getStockChartView().enableGlobalAxisRange(Side.BOTTOM, ar);
 	}
 
 	@Override

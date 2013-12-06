@@ -14,7 +14,8 @@ public class MainListActivity extends ListActivity
 				R.string.item_simple_chart,
 				R.string.item_simple_stock_chart,
 				R.string.item_realtime_stock_chart,
-				R.string.item_logarithmic_scale
+				R.string.item_logarithmic_scale,
+				R.string.item_vaxis
 			};
 			
 	@Override
@@ -34,7 +35,7 @@ public class MainListActivity extends ListActivity
 //		super.onListItemClick(l, v, position, id);
 		
 		int item_id = ITEM_IDS[position];
-		
+
 		switch(item_id)
 		{
 		case R.string.item_simple_chart:
@@ -49,7 +50,11 @@ public class MainListActivity extends ListActivity
 		case R.string.item_logarithmic_scale:
 			startActivity(new Intent(this, LogarithmicScaleActivity.class));
 			break;
+		case R.string.item_vaxis:
+			startActivity(new Intent(this, VirtualAxisActivity.class));
+			break;
 		}
+
 	}
 	
 	private String[] getItems()
